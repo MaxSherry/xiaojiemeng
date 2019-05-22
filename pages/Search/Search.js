@@ -34,6 +34,10 @@ Page({
 			activeNames: activeNames,
 			noData:searchData.length==0
 		})
+		
+		wx.setNavigationBarTitle({
+			title: '周公解梦@王新生'
+		})
 
 	},
 	onSearchFocus() {

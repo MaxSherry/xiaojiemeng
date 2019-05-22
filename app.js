@@ -3,9 +3,6 @@ const jiemeng = require('./data/jiemeng.js')
 
 App({
   onLaunch: function () {
-	  wx.setNavigationBarTitle({
-		  title:'周公解梦@王新生'
-	  })
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())

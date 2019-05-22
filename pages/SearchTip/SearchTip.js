@@ -9,6 +9,9 @@ Page({
 		this.setData({
 			words:SearchHistory.load()
 		})
+		wx.setNavigationBarTitle({
+			title: '周公解梦@王新生'
+		})
 	},
 	onSearch:function(event){
 		let detail = event.detail.trim()

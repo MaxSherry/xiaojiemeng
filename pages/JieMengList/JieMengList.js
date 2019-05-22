@@ -34,7 +34,7 @@ function scrollDir(page, i, h) {
 		} else {
 			clearTimeout(timer)
 			page.setData({
-				activeKey:i
+				activeKey: i
 			})
 		}
 	}).exec()
@@ -61,17 +61,22 @@ function endScroll(page, top) {
 
 Page({
 	data: {
-		searchFocus:false,
+		searchFocus: false,
 		jiemengData: jiemengData,
 		activeKey: 0,
 		cellGroupIndex: 0
 	},
+	onLoad(){
+		wx.setNavigationBarTitle({
+			title: '周公解梦@王新生'
+		})
+	},
 	onSearchFocus: function(index) {
 		this.setData({
-			searchFocus:false
+			searchFocus: false
 		})
 		wx.navigateTo({
-			url:'../SearchTip/SearchTip'
+			url: '../SearchTip/SearchTip'
 		})
 	},
 	onBadgeClick: function(event) {
@@ -83,6 +88,6 @@ Page({
 		let that = this,
 			found = false
 
-		endScroll(that,event.detail.scrollTop)
+		endScroll(that, event.detail.scrollTop)
 	}
 })
