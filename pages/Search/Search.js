@@ -37,9 +37,9 @@ Page({
 
 	},
 	onSearchFocus() {
-		wx.navigateBack({
-			delta:1
-			// url: '../SearchTip/SearchTip'
+		wx.navigateTo({
+			//delta:1
+			url: '../SearchTip/SearchTip'
 		})
 	},
 	onSearchCancel() {

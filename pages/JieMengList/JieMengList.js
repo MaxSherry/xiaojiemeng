@@ -12,7 +12,7 @@ app.globalData.jiemeng.forEach(d => {
 		} else if (i == items.length - 1) {
 			nitems.push(l);
 		}
-		tmp = l + "      ";
+		tmp = l + "  ";
 	});
 
 	jiemengData.push({

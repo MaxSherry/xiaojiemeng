@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.8",
-	"appid": "touristappid",
+	"libVersion": "2.7.0",
+	"appid": "wx14bafc8960964c1f",
 	"projectname": "jiemeng",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

@@ -14,7 +14,7 @@ Page({
 		let detail = event.detail.trim()
 		if(detail != ''){
 			SearchHistory.add(detail)
-			wx.navigateTo({
+			wx.redirectTo({
 				url:'../Search/Search?sw='+detail
 			})
 		}
@@ -22,7 +22,7 @@ Page({
 	},
 	onTagSearch:function(event){
 		let word = event.target.dataset.word
-		wx.navigateTo({
+		wx.redirectTo({
 			url:'../Search/Search?sw='+word
 		})
 	},
