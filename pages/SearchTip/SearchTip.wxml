@@ -1,0 +1,8 @@
+<search focus="true" show-action placeholder="请输入搜索关键词" shape="round" value="{{sw}}" bind:search="onSearch" bind:cancel="onSearchCancel"></search>
+<van-row class="van-row">
+	<van-col span="4" offset="1">搜索历史</van-col>
+	<van-col span="1" offset="17">
+		<van-icon name="delete" bind:click="onClearSearchHistory" size="12px" />
+	</van-col>
+</van-row>
+<tag class="tag-item" wx:for="{{words}}" wx:for-item="word" wx:key="word" round bindtap="onTagSearch" data-word="{{word}}">{{word}}</tag>

@@ -1,0 +1,14 @@
+.item-title > van-cell {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+}
+.search-item {
+	padding: 0 22px !important;
+}
+
+.nodata {
+	margin: 20px auto;
+	text-align: center;
+	font-size: 14px;
+}

@@ -1,0 +1,24 @@
+<search id="search" placeholder="请输入搜索关键词" shape="round" focus="{{searchFocus}}" bind:focus="onSearchFocus"></search>
+
+<van-row>
+	<van-col span="8">
+		<scroll-view scroll-y="true" scroll-with-animation="true" class="scroll-view">
+			<badge-group active="{{activeKey}}" bind:change="onBadgeClick">
+				<badge wx:for="{{jiemengData}}" wx:for-item="dir" wx:for-index="index" wx:key="dir.dir" title="{{dir.dir}}" />
+			</badge-group>
+		</scroll-view>
+	</van-col>
+	<van-col span="16">
+		<scroll-view class="list-content-list" scroll-y="true" scroll-with-animation="true" scroll-into-view="cellgroup{{cellGroupIndex}}"
+		 bindscroll="contentScroll" class="scroll-view">
+			<cell-group wx:for="{{jiemengData}}" wx:for-item="dir" wx:for-index="index" wx:key="dir.dir" id="cellgroup{{index}}"
+			 title="{{dir.dir}}">
+				<cell wx:for="{{dir.items}}" wx:for-item="item" wx:key="item">
+					<view slot="title">
+						<text space="nbsp">{{item}}</text>
+					</view>
+				</cell>
+			</cell-group>
+		</scroll-view>
+	</van-col>
+</van-row>

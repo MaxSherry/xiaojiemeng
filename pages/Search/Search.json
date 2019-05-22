@@ -1,0 +1,8 @@
+{
+	"usingComponents": {
+		"search": "../../vant/search/index",
+		"collapse":"../../vant/collapse/index",
+		"collapse-item":"../../vant/collapse-item/index",
+		"cell":"../../vant/cell/index"
+	}
+}

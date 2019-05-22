@@ -1,0 +1,11 @@
+{
+	"usingComponents": {
+		"van-row": "../../vant/row/index",
+		"van-col": "../../vant/col/index",
+		"badge": "../../vant/badge/index",
+		"badge-group": "../../vant/badge-group/index",
+		"cell": "../../vant/cell/index",
+		"cell-group": "../../vant/cell-group/index",
+		"search": "../../vant/search/index"
+	}
+}

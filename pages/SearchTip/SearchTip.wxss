@@ -1,0 +1,16 @@
+page {
+	background-color: #f2f3f5;
+}
+
+.search-history {
+	height: 100vh;
+}
+
+.van-row {
+	font-size: 12px;
+	line-height: 1.875rem
+}
+
+.tag-item {
+  margin-left: 0.625rem;
+}

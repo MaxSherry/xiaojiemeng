@@ -1,0 +1,24 @@
+<search
+      placeholder="请输入搜索关键词"
+      value="{{word}}"
+      shape="round"
+      show-action
+      bind:focus="onSearchFocus"
+      bind:search="onSearch"
+      bind:cancel="onSearchCancel"
+    ></search>
+	<collapse value="{{activeNames}}" bind:change="onSearch">
+      <collapse-item
+	  content-class="search-item"
+	  custom-class="item-title"
+        wx:for="{{searchData}}"
+		wx:for-item="dir"
+        wx:key="{{dir.dir}}"
+        title="{{dir.dir}}"
+        name="{{dir.dir}}"
+        icon="label-o"
+      >
+        <cell wx:for="{{dir.items}}" wx:for-item="item" wx:key="item" title="{{item}}"></cell>
+      </collapse-item>
+    </collapse>
+	<view class="nodata" wx:if="{{noData}}">没有检索到数据</view>
