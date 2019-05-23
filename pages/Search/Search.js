@@ -46,10 +46,10 @@ Page({
 				//delta:1
 				url: '../SearchTip/SearchTip'
 			})
-		}else{
+		} else {
 			this.data.isCancelTap = false
 			wx.navigateBack({
-				delta:2
+				delta: 2
 			})
 		}
 	},
@@ -59,5 +59,11 @@ Page({
 			delta:2
 			// url: '../JieMengList/JieMengList'
 		}) */
+	},
+	onSearch(event) {
+		this.setData({
+			activeNames: event.detail,
+		});
+
 	}
 })
