@@ -5,7 +5,8 @@ Page({
 		word: "",
 		searchData: [],
 		activeNames: [],
-		noData:false
+		isCancelTap: false,
+		noData: false
 	},
 	onLoad(options) {
 		let word = options.sw,
@@ -15,7 +16,6 @@ Page({
 			let items = [];
 			d.items.forEach(n => {
 				if (n.indexOf(word) != -1) {
-					console.log(n, word)
 					items.push(n);
 				}
 			});
@@ -32,30 +32,32 @@ Page({
 			word: options.sw,
 			searchData: searchData,
 			activeNames: activeNames,
-			noData:searchData.length==0
+			noData: searchData.length == 0
 		})
-		
+
 		wx.setNavigationBarTitle({
 			title: '周公解梦@王新生'
 		})
 
 	},
-	onSearchFocus() {
-		wx.navigateTo({
-			//delta:1
-			url: '../SearchTip/SearchTip'
-		})
+	onSearchTap(event) {
+		if (!this.data.isCancelTap) {
+			wx.navigateTo({
+				//delta:1
+				url: '../SearchTip/SearchTip'
+			})
+		}else{
+			this.data.isCancelTap = false
+			wx.navigateBack({
+				delta:2
+			})
+		}
 	},
 	onSearchCancel() {
-		wx.navigateBack({
+		this.data.isCancelTap = true
+		/* wx.navigateBack({
 			delta:2
 			// url: '../JieMengList/JieMengList'
-		})
-	},
-	onSearch(event) {
-		this.setData({
-			activeNames: event.detail,
-		});
-
+		}) */
 	}
 })

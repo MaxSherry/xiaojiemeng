@@ -3,8 +3,10 @@
       value="{{word}}"
       shape="round"
       show-action
-      bind:focus="onSearchFocus"
-      bind:search="onSearch"
+	  disabled
+	  readonly
+	  focus="false"
+      bindtap="onSearchTap"
       bind:cancel="onSearchCancel"
     ></search>
 	<collapse value="{{activeNames}}" bind:change="onSearch">

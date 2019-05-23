@@ -1,4 +1,4 @@
-<search id="search" placeholder="请输入搜索关键词" shape="round" focus="{{searchFocus}}" bind:focus="onSearchFocus"></search>
+<search id="search" disabled readonly placeholder="请输入搜索关键词" shape="round" bindtap="onSearchTap"></search>
 
 <van-row>
 	<van-col span="8">

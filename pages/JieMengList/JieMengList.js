@@ -61,7 +61,6 @@ function endScroll(page, top) {
 
 Page({
 	data: {
-		searchFocus: false,
 		jiemengData: jiemengData,
 		activeKey: 0,
 		cellGroupIndex: 0
@@ -71,10 +70,7 @@ Page({
 			title: '周公解梦@王新生'
 		})
 	},
-	onSearchFocus: function(index) {
-		this.setData({
-			searchFocus: false
-		})
+	onSearchTap: function() {
 		wx.navigateTo({
 			url: '../SearchTip/SearchTip'
 		})
